@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TaxistasMaui.Modales.Unidades"
+             Title="Unidades">
+    <Grid
+        Padding="10">
+        <ScrollView  
+            VerticalOptions="FillAndExpand">
+            
+            <StackLayout 
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="FillAndExpand">
+
+                <Label 
+                    Text="COBRO UNIDADES"
+                    TextColor="#1967a9" 
+                    FontAttributes="Bold"
+                    FontFamily="FAS"
+                    Margin="0,0,0,50"
+                    FontSize="Title"
+                    HorizontalOptions="CenterAndExpand" />
+
+                <Label 
+                    Text="&#xf084; Contraseña del vale"
+                    Margin="0,20,0,0"
+                    FontFamily="FAS"
+                    FontSize="Large"
+                    x:Name="lblunivale"
+                    HorizontalOptions="CenterAndExpand"
+                    IsVisible="False"/>
+
+                <Entry 
+                    x:Name="txtunivale"
+                    Margin="15,0,15,0"
+                    HorizontalOptions="FillAndExpand"
+                    IsVisible="False"/>
+
+                <Label 
+                    Text="&#xf0cb; Unidades"
+                    HorizontalOptions="CenterAndExpand"
+                    FontFamily="FAS"
+                    FontSize="Large"
+                    Margin="0,20,0,0"/>
+
+                <Entry 
+                    Keyboard="Numeric"
+                    Margin="15,0,15,0"
+                    x:Name="txtunidades"
+                    HorizontalOptions="FillAndExpand"/>
+
+                <StackLayout
+                    Orientation="Horizontal"
+                    Margin="0,30,0,0">
+
+                    <CheckBox 
+                        x:Name="check" 
+                        Scale="1.5"
+                        Margin="15,0,0,0"
+                        IsChecked="False"/>
+
+                    <Label 
+                        Text="&#xf5b0; Unidades aeropuerto"
+                        HorizontalOptions="CenterAndExpand"
+                        FontFamily="FAS"
+                        FontSize="Large"/>
+                </StackLayout>
+
+                <StackLayout 
+                    Orientation="Horizontal"
+                    Margin="0,30,0,0"
+                    Spacing="10"
+                    VerticalOptions="StartAndExpand"
+                    HorizontalOptions="FillAndExpand">
+
+                    <Button 
+                        x:Name="btnnounidades"
+                        Text="&#xf05e; Cancelar"
+                        FontFamily="FAS"
+                        HeightRequest="65"
+                        FontAttributes="Bold"
+                        BackgroundColor="LightGray"
+                        VerticalOptions="FillAndExpand"
+                        HorizontalOptions="FillAndExpand"
+                        Clicked="btnnounidades_Clicked"/>
+
+                    <Button 
+                        x:Name="btnokunidades"
+                        Clicked="btnokunidades_Clicked"
+                        Text="&#xf14a; Aceptar"
+                        FontFamily="FAS"
+                        FontAttributes="Bold"
+                        BackgroundColor="#31D03B"
+                        HeightRequest="65"
+                        VerticalOptions="FillAndExpand"
+                        HorizontalOptions="FillAndExpand"/>
+                </StackLayout>
+
+                <Button 
+                    Text="&#xf3d1; Más medios de cobro"                     
+                    FontFamily="FAS"
+                    FontSize="Large"                          
+                    x:Name="btnmedios"
+                    Clicked="btnmedios_Clicked"
+                    BackgroundColor="Transparent"   
+                    Margin="0,40,0,0"
+                    FontAttributes="Bold"
+                    TextColor="#1967a9"/>
+            </StackLayout>
+        </ScrollView>
+
+        <Grid
+                x:Name="grillacobrar"
+                IsVisible="False"
+                Opacity=".8"
+                BackgroundColor="Black">
+            <ActivityIndicator
+                x:Name="spincobrar"
+                IsRunning="True"
+                HorizontalOptions="Center">
+            </ActivityIndicator>
+        </Grid>
+
+    </Grid>
+</ContentPage>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TaxistasMaui.Modales.Cancelar"
+             Title="Cancelar">
+    <Grid
+        Padding="10">
+        <StackLayout 
+            Orientation="Vertical"
+            VerticalOptions="CenterAndExpand" 
+            HorizontalOptions="FillAndExpand">
+
+            <Label 
+                Text="¿Está seguro de cancelar el servicio?"
+                FontFamily="FAS"
+                FontSize="Large"
+                VerticalOptions="StartAndExpand"
+                HorizontalOptions="CenterAndExpand"
+                FontAttributes="Bold" />
+
+            <Entry          
+                Placeholder="Motivo para cancelar"
+                Margin="15,50,15,0"
+                x:Name="justificacion"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="CenterAndExpand"/>
+
+            <StackLayout
+                Orientation="Horizontal"
+                Margin="0,50,0,0"
+                Spacing="10"
+                VerticalOptions="StartAndExpand"
+                HorizontalOptions="FillAndExpand">
+
+                <Button  
+                    x:Name="btnno"
+                    Clicked="btnno_Clicked"
+                    Text="&#xf05e; Cancelar"
+                    FontFamily="FAS"
+                    BackgroundColor="LightGray"
+                    HeightRequest="65"
+                    FontAttributes="Bold"
+                    VerticalOptions="FillAndExpand"
+                    HorizontalOptions="FillAndExpand"/>
+
+                <Button 
+                    x:Name="btnsi"
+                    Clicked="btnsi_Clicked"
+                    Text="&#xf14a; Aceptar"
+                    FontFamily="FAS"
+                    FontAttributes="Bold"    
+                    BackgroundColor="#1967a9"
+                    HeightRequest="65"
+                    VerticalOptions="FillAndExpand"
+                    HorizontalOptions="FillAndExpand"/>
+
+            </StackLayout>
+        </StackLayout>
+        <Grid
+            x:Name="grillalogin"
+            IsVisible="False"
+            Opacity=".8"
+            BackgroundColor="Black">
+            <ActivityIndicator
+                x:Name="spin"
+                IsRunning="True"
+                HorizontalOptions="Center">
+            </ActivityIndicator>
+        </Grid>
+
+    </Grid>
+</ContentPage>

@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TaxistasMaui.HomeDetail">
+    <NavigationPage.TitleView>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <StackLayout Orientation="Horizontal" Grid.Column="0" VerticalOptions="Center">
+            <Label 
+                FontFamily="FAS"
+                FontSize="Title"
+                Text="&#xf0c9; "
+                VerticalOptions="CenterAndExpand">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer 
+                         NumberOfTapsRequired="1"
+                        Tapped="TapGestureRecognizer_Tapped"/>
+                </Label.GestureRecognizers>
+            </Label>
+                <Label
+                VerticalOptions="CenterAndExpand"
+                VerticalTextAlignment="Center"
+                Text="Inicio"
+                FontSize="Title"/>
+            </StackLayout>
+            <Label x:Name="ThemeToggleIcon"
+           FontFamily="FAS"
+           FontSize="25"
+           Text="&#xf185;"
+           HorizontalOptions="End" 
+                VerticalOptions="CenterAndExpand"
+           GestureRecognizers="{TapGestureRecognizer Tapped='OnThemeToggleTapped'}" 
+           Grid.Column="1"
+           Margin="0,0,20,0"/>
+        </Grid>
+    </NavigationPage.TitleView>
+    <ScrollView       
+        VerticalOptions="FillAndExpand">
+        <VerticalStackLayout 
+            x:Name="stackdetail"  
+            VerticalOptions="FillAndExpand">
+
+            <Label 
+               x:Name="lblnombre"
+               HorizontalOptions="CenterAndExpand"
+               FontSize="30"
+               MaxLines="2"
+               HorizontalTextAlignment="Center"
+               Text=""
+               FontAttributes="Bold"/>
+
+            <Label 
+               x:Name="lbldocumento"
+               HorizontalOptions="CenterAndExpand"
+               HorizontalTextAlignment="Center"
+               FontFamily="FAS"
+               FontSize="Large"
+               Margin="0,20,0,0"
+               Text=""
+               FontAttributes="Bold"/>
+
+            <Frame
+            BackgroundColor="Transparent"  
+            CornerRadius="20"
+            HasShadow="True"
+            BorderColor="Transparent"
+            Padding="0"
+            WidthRequest="300"
+            HeightRequest="150"
+            HorizontalOptions="Center"
+            VerticalOptions="Center">
+                <Grid
+                Padding="15" 
+                WidthRequest="250"              
+                HeightRequest="150"               
+                HorizontalOptions="Center"
+                VerticalOptions="Center">
+                    <Image 
+                        Source="placa.png"  
+                        Aspect="AspectFill"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand"
+                        Opacity="1"/>
+
+                    <Grid HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+
+
+                        <Label 
+                    x:Name="lblplaca"
+                    HorizontalOptions="CenterAndExpand"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalTextAlignment="Center"
+                    FontFamily="FAS"
+                    FontSize="Large"
+                    Margin="0,10,0,0"  
+                    Text="&#xf1ba; Placa"
+                    FontAttributes="Bold"
+                    LineBreakMode="WordWrap"
+                    MaxLines="1"
+                    Grid.Row="0"/>
+
+                        <Picker 
+                    x:Name="picplaca"
+                    Scale="1.5"
+                    FontFamily="Georgia"
+                    HorizontalOptions="CenterAndExpand"
+                    VerticalOptions="CenterAndExpand"
+                    SelectedIndexChanged="Picplaca_SelectedIndexChanged"
+                    FontSize="Large"
+                    Margin="0,-5,0,0"  
+                    Grid.Row="1"/>
+                    </Grid>
+                </Grid>
+            </Frame>
+
+
+            <Label 
+               x:Name="lblsaldorecargas"
+               HorizontalOptions="CenterAndExpand"
+               HorizontalTextAlignment="Center"
+               FontSize="Large"
+               Margin="0,20,0,0"
+               Text=""
+               TextColor="Green"
+               FontAttributes="Bold"/>
+
+            <Label 
+               x:Name="lblsaldovales"
+               HorizontalOptions="CenterAndExpand"
+               HorizontalTextAlignment="Center"
+               FontSize="Large"
+               Margin="0,20,0,0"
+               Text=""
+               TextColor="Green"
+               FontAttributes="Bold"/>
+
+            <Grid 
+                RowSpacing="20"
+                Margin="20,50,20,0">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Label
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    Text="Estado:"
+                    x:Name="lblestado"      
+                    FontSize="25"/>
+
+                <Button 
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    Text="Disponible  &#xf058;"
+                    x:Name="btnestado"
+                    FontFamily="FAS"
+                    TextColor="White"
+                    FontSize="25"
+                    CornerRadius="10"
+                    Clicked="Btnestado_Clicked"
+                    BackgroundColor="Green">
+                </Button>
+
+                <Label 
+                   Grid.Row="1"
+                   Grid.Column="0"
+                   Text="&#xf1eb; Internet"
+                   FontFamily="FAS"
+                   x:Name="lblinfored"
+                   VerticalOptions="Center"
+                   HorizontalOptions="StartAndExpand"
+                   FontAttributes="Bold"
+                   FontSize="Large"/>
+
+                <Label
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    Text="&#xf058;"
+                    FontFamily="FAS"
+                    FontSize="Large"
+                    TextColor="Green"
+                    x:Name="lblinternet"
+                    HorizontalOptions="EndAndExpand"
+                    VerticalOptions="Center"/>
+
+                <Label
+                   Grid.Row="2"
+                   Grid.Column="0"
+                   Text="&#xf3c5; Geolocalización"
+                   x:Name="lblinfogps"
+                   FontFamily="FAS"
+                   VerticalOptions="Center"
+                   HorizontalOptions="StartAndExpand"
+                   FontAttributes="Bold"
+                   FontSize="Large"/>
+
+                <Label 
+                    Grid.Row="2"
+                    Grid.Column="1"
+                    Text="&#xf058;"
+                    FontFamily="FAS"
+                    FontSize="Large"
+                    TextColor="Green"
+                    x:Name="lblgeo"
+                    HorizontalOptions="EndAndExpand"
+                    VerticalOptions="Center"/>
+
+                <Button
+                    Grid.Row="3"
+                    Grid.Column="0"
+                    x:Name="btngestiones"
+                    Text="&#xf15c; Trámites"
+                    FontFamily="FAS"
+                    HorizontalOptions="StartAndExpand"
+                    VerticalOptions="Center"
+                    WidthRequest="150"
+                    HeightRequest="50"
+                    CornerRadius="20"
+                    Clicked="Btngestiones_Clicked"/>
+
+                <Button
+                    Grid.Row="3"
+                    Grid.Column="1"
+                    x:Name="btnalerta"
+                    Text="&#xf071;"
+                    FontSize="15"
+                    FontFamily="FAS"
+                    WidthRequest="80"
+                    HeightRequest="80"
+                    CornerRadius="50"
+                    VerticalOptions="Center"
+                    HorizontalOptions="EndAndExpand"
+                    BackgroundColor="Red"
+                    Clicked="Btnalerta_Clicked"/>
+
+            </Grid>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

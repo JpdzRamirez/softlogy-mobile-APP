@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TaxistasMaui.Cuenta">
+    <NavigationPage.TitleView>
+        <StackLayout 
+            Orientation="Horizontal">
+            <Label 
+                FontFamily="FAS"
+                FontSize="Title"
+                Text="&#xf0c9; "
+                VerticalOptions="CenterAndExpand">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer 
+                     NumberOfTapsRequired="1"
+                    Tapped="TapGestureRecognizer_Tapped"/>
+                </Label.GestureRecognizers>
+            </Label>
+            <Label
+                VerticalOptions="CenterAndExpand"
+                VerticalTextAlignment="Center"
+                Text="Cuenta"
+                FontSize="Title"/>
+        </StackLayout>
+    </NavigationPage.TitleView>
+    <Grid 
+        x:Name="stackcuenta">
+         
+        <StackLayout
+            VerticalOptions="FillAndExpand"
+            HorizontalOptions="FillAndExpand"
+            Orientation="Vertical"
+            Margin="10">
+            
+            <ScrollView 
+                VerticalOptions="FillAndExpand">
+                <Grid
+                    RowSpacing="5">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <StackLayout
+                        Margin="0,0,0,20"
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        Orientation="Vertical"
+                        HorizontalOptions="FillAndExpand">
+                        <Image  
+                            Aspect="AspectFit"
+                            HeightRequest="150"
+                            HorizontalOptions="CenterAndExpand"
+                            x:Name="imgfoto"/>
+
+                        <Button 
+                            x:Name="changefoto"
+                            Text="Cambiar foto"
+                            Clicked="Changefoto_Clicked"
+                            Margin="0,5,0,0"
+                            HorizontalOptions="CenterAndExpand"/>
+                    </StackLayout>
+                    
+
+                    <Label
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        Text="&#xf3cd; Celular"
+                        FontFamily="FAS"
+                        x:Name="lblcelular"
+                        FontSize="Large"                           
+                        HorizontalOptions="StartAndExpand"/>
+
+                    <Entry
+                        Grid.Row="2"
+                        Grid.Column="0"
+                        x:Name="txtcelular"
+                        HorizontalOptions="Fill"
+                        Margin="0,0,0,10"
+                        Keyboard="Numeric"/>
+
+                    <Label
+                        Grid.Row="3"
+                        Grid.Column="0"  
+                        Text="&#xf879; Teléfono fijo"
+                        FontSize="Large"
+                        FontFamily="FAS"
+                        x:Name="lblfijo"                          
+                        HorizontalOptions="StartAndExpand"/>
+
+                    <Entry
+                        Grid.Row="4"
+                        Grid.Column="0"  
+                        x:Name="txtfijo"
+                        HorizontalOptions="FillAndExpand"
+                        Margin="0,0,0,10"
+                        Keyboard="Numeric"/>
+
+                    <Label 
+                        Grid.Row="5"
+                        Grid.Column="0"
+                        Text="&#xf015; Dirección"
+                        FontFamily="FAS"
+                        FontSize="Large"                          
+                        x:Name="lbldireccion"
+                        HorizontalOptions="StartAndExpand"/>
+
+                    <Entry
+                        Grid.Row="6"
+                        Grid.Column="0"  
+                        x:Name="txtdireccion"
+                        HorizontalOptions="FillAndExpand"
+                        Margin="0,0,0,10"/>
+
+                    <Label
+                        Grid.Row="7"
+                        Grid.Column="0"  
+                        Text="&#x40; Email"
+                        FontFamily="FAS"
+                        FontSize="Large"                          
+                        x:Name="lblemail"
+                        HorizontalOptions="StartAndExpand"/>
+
+                    <Entry
+                        Grid.Row="8"
+                        Grid.Column="0" 
+                        x:Name="txtemail"
+                        HorizontalOptions="FillAndExpand"
+                        Margin="0,0,0,10"
+                        Keyboard="Email"/>
+
+                    <Label
+                        Grid.Row="9"
+                        Grid.Column="0"  
+                        Text="&#xf084; Contraseña"
+                        FontFamily="FAS"
+                        x:Name="lblpass"                          
+                        FontSize="Large"
+                        HorizontalOptions="StartAndExpand"/>
+
+                    <Entry
+                        Grid.Row="10"
+                        Grid.Column="0"  
+                        x:Name="txtclave"
+                        HorizontalOptions="FillAndExpand"
+                        Margin="0,0,0,10"
+                        IsPassword="True"/>
+
+                    <Button
+                        Grid.Row="11"
+                        Grid.Column="0"  
+				        Text="Eliminar cuenta"
+				        FontFamily="FAS"
+				        FontSize="Small"
+				        VerticalOptions="StartAndExpand"
+				        HorizontalOptions="StartAndExpand"
+				        TextColor="Blue"
+				        BackgroundColor="Transparent"
+				        x:Name="btneliminar"
+				        Clicked="Btneliminar_Clicked"/>
+                </Grid>
+                    
+            </ScrollView>
+            <Button 
+                Text="Guardar &#xf00c;"
+                FontFamily="FAS"
+                FontSize="Large"
+                Margin="0,20,0,0"
+                VerticalOptions="End"
+                TextColor="White"
+                BackgroundColor="#1967a9"
+                CornerRadius="10"
+                BorderColor="Black"
+                HorizontalOptions="FillAndExpand"
+                x:Name="btnguardar"
+                Clicked="Btnguardar_Clicked"/>
+        </StackLayout>
+
+        <Grid
+            x:Name="grilla"
+            IsVisible="False"
+            Opacity=".8"
+            BackgroundColor="Black">
+            
+            <ActivityIndicator
+                x:Name="spin"
+                IsRunning="True"
+                HorizontalOptions="Center">
+            </ActivityIndicator>
+        </Grid>
+
+    </Grid>
+</ContentPage>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TaxistasMaui.Privacidad">
+    <NavigationPage.TitleView>
+        <StackLayout Orientation="Horizontal">
+            <Label 
+            FontFamily="FAS"
+            FontSize="Title"
+            Text="&#xf0c9; "
+            VerticalOptions="CenterAndExpand">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer 
+                     NumberOfTapsRequired="1"
+                    Tapped="TapGestureRecognizer_Tapped"/>
+                </Label.GestureRecognizers>
+            </Label>
+            <Label
+            VerticalOptions="CenterAndExpand"
+            VerticalTextAlignment="Center"
+            Text="Política de privacidad"
+            FontSize="Title"/>
+        </StackLayout>
+    </NavigationPage.TitleView>
+    <ScrollView>
+        <VerticalStackLayout 
+            Margin="15,15,15,15">
+
+            <Label 
+                Text="Política de Privacidad"
+                TextColor="#1967a9"
+                HorizontalOptions="CenterAndExpand"
+                FontSize="Title"/>
+
+            <Label 
+                Text="La presente Política de Privacidad establece los términos en que Taxiseguro usa y protege la información que es proporcionada por sus usuarios al momento de utilizar su aplicación móvil. Esta compañía está comprometida con la seguridad de los datos de sus usuarios. Cuando le pedimos llenar los campos de información personal con la cual usted pueda ser identificado, lo hacemos asegurando que sólo se empleará de acuerdo con los términos de este documento. Sin embargo esta Política de Privacidad puede cambiar con el tiempo o ser actualizada por lo que le recomendamos y enfatizamos revisar continuamente esta página para asegurarse que está de acuerdo con dichos cambios."
+                FontSize="Body"
+                HorizontalOptions="StartAndExpand"/>
+
+            <Label 
+                Text="Información que es recogida"
+                Margin="0,5,0,0"
+                FontSize="Subtitle"
+                HorizontalOptions="StartAndExpand"
+                TextColor="#1967a9"/>
+
+            <Label 
+                Text="Nuestra aplicación móvil podrá recoger información personal como por ejemplo: Nombre, teléfono, correo electrónico y la ubicación geográfica del dispositivo. Así mismo cuando sea necesario podrá ser requerida información específica para procesar algún pedido o realizar una entrega o facturación."
+                FontSize="Body"
+                HorizontalOptions="StartAndExpand"/>
+
+            <Label 
+                Text="Uso de la información recogida"
+                Margin="0,5,0,0"
+                TextColor="#1967a9"
+                FontSize="Subtitle"
+                HorizontalOptions="StartAndExpand"/>
+
+            <Label 
+                Text="Nuestra aplicación móvil emplea la información con el fin de proporcionar el mejor servicio posible, particularmente para mantener un registro de usuarios, de pedidos y mejorar nuestros servicios."
+                FontSize="Body"
+                HorizontalOptions="StartAndExpand"/>
+
+            <Label 
+                Text="Taxiseguro está altamente comprometido para cumplir con el compromiso de mantener su información segura. Usamos los sistemas más avanzados y los actualizamos constantemente para asegurarnos que no exista ningún acceso no autorizado."
+                FontSize="Body"
+                HorizontalOptions="StartAndExpand"/>
+
+            <Label 
+                Text="Control de su información personal"
+                FontSize="Subtitle"
+                Margin="0,5,0,0"
+                HorizontalOptions="StartAndExpand"
+                TextColor="#1967a9"/>
+
+            <Label 
+                Text="En cualquier momento usted puede restringir la recopilación o el uso de la información personal que es proporcionada a nuestra aplicación móvil. Esta compañía no venderá, cederá ni distribuirá la información personal que es recopilada sin su consentimiento, salvo que sea requerido por un juez con una orden judicial. Taxiseguro se reserva el derecho de cambiar los términos de la presente Política de Privacidad en cualquier momento."
+                FontSize="Body"
+                HorizontalOptions="StartAndExpand"
+                Margin="0,0,0,40"/>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

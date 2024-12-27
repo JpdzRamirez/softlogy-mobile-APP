@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TaxistasMaui.ModalPasajero"
+             Title="Listado de Pasajeros"
+             x:Name="ContentMain">
+    <VerticalStackLayout 
+        Margin="15,15,15,15"
+        x:Name="StackMain">
+        
+        <Label 
+            x:Name="LblListadoPasajeros"
+            Text="Listado de pasajeros"
+            FontSize="Large"
+            HorizontalTextAlignment="Center"
+            FontAttributes="Bold" />
+        
+        <ListView 
+            x:Name="lstpasajeros"
+            HasUnevenRows="True"
+            ItemSelected="lstpasajeros_ItemSelected"
+            VerticalOptions="FillAndExpand">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <VerticalStackLayout
+                            Spacing="1"
+                            Padding="5">
+                            <Label 
+                                x:Name="nombre"
+                                Text="{Binding nombre}"
+                                FontSize="Small"
+                                FontAttributes="Bold"
+                                Margin="0,0,0,0"
+                                VerticalOptions="StartAndExpand"/>
+                            <Label 
+                                x:Name="direccion"
+                                Text="{Binding direccion}"
+                                FontSize="Small"
+                                FontAttributes="Bold"
+                                Margin="0,0,0,0"
+                                VerticalOptions="StartAndExpand"/>
+
+                            <Label 
+                                x:Name="celulares"
+                                Text="{Binding celulares}"
+                                FontSize="Small"
+                                FontAttributes="Bold"
+                                Margin="0,0,0,0"
+                                VerticalOptions="StartAndExpand"/>
+                        </VerticalStackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </VerticalStackLayout>
+</ContentPage>

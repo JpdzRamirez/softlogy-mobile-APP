@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TaxistasMaui.Recargar">
+    <NavigationPage.TitleView>
+        <StackLayout Orientation="Horizontal">
+            <Label 
+            FontFamily="FAS"
+            FontSize="Title"
+            Text="&#xf0c9; "
+            VerticalOptions="CenterAndExpand">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer 
+                     NumberOfTapsRequired="1"
+                    Tapped="TapGestureRecognizer_Tapped"/>
+                </Label.GestureRecognizers>
+            </Label>
+            <Label
+            VerticalOptions="CenterAndExpand"
+            VerticalTextAlignment="Center"
+            Text="Recargar"
+            FontSize="Title"/>
+        </StackLayout>
+    </NavigationPage.TitleView>
+    <Grid 
+        x:Name="stackrecarga">
+        
+        <ScrollView>
+            
+            <VerticalStackLayout 
+                VerticalOptions="FillAndExpand" 
+                Margin="10,30,10,10">
+
+                <Label 
+                    Text="Saldo Recargas"
+                    x:Name="lblsaldor"
+                    FontSize="Large"
+                    FontAttributes="Bold"
+                    HorizontalOptions="CenterAndExpand"/>
+
+                <Label 
+                    x:Name="recargas"
+                    HorizontalOptions="CenterAndExpand"
+                    HorizontalTextAlignment="Center"
+                    FontSize="28"
+                    Text="$10,000"
+                    TextColor="Green"
+                    Margin="0,0,0,30"
+                    FontAttributes="Bold"/>
+
+                <Label 
+                    Text="Saldo Vales"
+                    x:Name="lblsaldov"
+                    FontSize="Large"
+                    FontAttributes="Bold"
+                    HorizontalOptions="CenterAndExpand"/>
+
+                <Label 
+                    x:Name="vales"
+                    HorizontalOptions="CenterAndExpand"
+                    HorizontalTextAlignment="Center"
+                    FontSize="28"
+                    Margin="0,0,0,30"
+                    Text="$50,000"
+                    TextColor="Green"
+                    FontAttributes="Bold"/>
+
+                <Entry 
+                    Placeholder="&#x24; Valor"
+                    FontFamily="FAS"
+                    Margin="0,20,0,10"
+                    x:Name="txtvalor"
+                    Keyboard="Numeric"
+                    FontSize="Large"
+                    HorizontalOptions="FillAndExpand"/>
+
+                <Label
+                x:Name="lblnota"
+                HorizontalOptions="StartAndExpand"
+                FontSize="Medium">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Nota: El valor ingresado será descontado del saldo en vales para ser transferido hacia el saldo de las recargas. " />
+                            <Span Text="Valor mínimo: " FontAttributes="Bold" />
+                            <Span Text="$13.600 " TextColor="Red" />
+                            <Span Text="y máximo " FontAttributes="Bold" />
+                            <Span Text="$100.000" TextColor="Red" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+
+                <Button 
+                    HorizontalOptions="FillAndExpand"
+                    BackgroundColor="#1967a9"
+                    CornerRadius="10"
+                    TextColor="White"
+                    WidthRequest="250"
+                    BorderColor="Black"
+                    Margin="0,30,0,0"
+                    FontSize="Large"
+                    x:Name="btnrecargar"
+                    Clicked="btnrecargar_Clicked"
+                    Text="Efectuar recarga  &#xf079;"
+                    FontFamily="FAS"/>
+            </VerticalStackLayout>
+        </ScrollView>
+        <Grid
+            x:Name="grilla"
+            IsVisible="False"
+            Opacity=".8"
+            BackgroundColor="Black">
+
+            <ActivityIndicator
+                x:Name="spin"
+                IsRunning="True"
+                HorizontalOptions="Center">
+            </ActivityIndicator>
+        </Grid>
+    </Grid>
+</ContentPage>

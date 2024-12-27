@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TaxistasMaui.Tramite">
+    <NavigationPage.TitleView>
+        <StackLayout Orientation="Horizontal">
+            <Label 
+            FontFamily="FAS"
+            FontSize="Title"
+            Text="&#xf0c9; "
+            VerticalOptions="CenterAndExpand">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer 
+                     NumberOfTapsRequired="1"
+                    Tapped="TapGestureRecognizer_Tapped"/>
+                </Label.GestureRecognizers>
+            </Label>
+            <Label
+            VerticalOptions="CenterAndExpand"
+            VerticalTextAlignment="Center"
+            Text="Trámites"
+            FontSize="Title"/>
+        </StackLayout>
+    </NavigationPage.TitleView>
+    <Grid 
+        x:Name="gridtramite">
+        
+        <ScrollView>
+            <VerticalStackLayout
+                Margin="15">
+
+                <Label 
+                    Text="&#xf46d; Tipo de Solicitud:"
+                    FontFamily="FAS"
+                    FontSize="Large"
+                    HorizontalOptions="FillAndExpand"
+                    x:Name="lblsolicitud"
+                    VerticalOptions="Start"/>
+
+                <Picker 
+                    x:Name="picdoc"
+                    Margin="0, 0, 0, 15"
+                    HorizontalOptions="Fill"
+                    SelectedIndexChanged="picdoc_SelectedIndexChanged"
+                    VerticalOptions="Start"
+                    FontSize="Large"/>
+
+                <Label 
+                    Text="&#xf1ba; Placa:"
+                    FontFamily="FAS"
+                    FontSize="Large"
+                    x:Name="lblplaca"    
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="Start"/>
+                
+                <Editor 
+                    HorizontalOptions="FillAndExpand"
+                    Margin="0, 0, 0, 15"
+                    MaxLength="7"
+                    Placeholder="ABC-123"
+                    VerticalOptions="Start"
+                    x:Name="editplaca"/>
+
+                <Label 
+                    Text="&#xf0e0; Correo electrónico:"
+                    FontFamily="FAS"
+                    x:Name="lblemail"
+                    FontSize="Large"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="Start"/>
+
+                <Editor 
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="Start"
+                    Keyboard="Email"
+                    Margin="0, 0, 0, 15"
+                    x:Name="editemail"/>
+
+                <Label 
+                    Text="&#xf10b; Celular:"
+                    FontFamily="FAS"
+                    x:Name="lblcelular"
+                    FontSize="Large"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="Start"/>
+
+                <Editor 
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="Start"
+                    Keyboard="Numeric"
+                    Margin="0, 0, 0, 15"
+                    x:Name="editcelular"/>
+
+                <StackLayout 
+                    x:Name="stackmonto"
+                    IsVisible="false"
+                    Margin="0, 0, 0, 15">
+
+                    <Label 
+                        Text="&#xf007; Constancia Dirigida a:"
+                        FontFamily="FAS"
+                        FontSize="Large"
+                        x:Name="lbldirigida"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="Start"/>
+
+                    <Editor 
+                        HorizontalOptions="FillAndExpand"
+                        Margin="0, 0, 0, 15"
+                        VerticalOptions="Start"
+                        x:Name="editdirigido"/>
+
+                    <Label 
+                        Text="En mi condición de propietario certifico que los ingresos de mi vehículo corresponden a un promedio mensual de $:"
+                        FontFamily="FAS"
+                        x:Name="lblmonto"
+                        FontSize="Large"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="Start"/>
+
+                    <Editor 
+                        HorizontalOptions="FillAndExpand"
+                        Keyboard="Numeric"
+                        VerticalOptions="Start" 
+                        x:Name="editmonto"/>
+                </StackLayout>
+
+                <Label 
+                    Text="&#xf2c2; Cédula:"
+                    FontFamily="FAS"
+                    x:Name="lblcedula"
+                    FontSize="Large"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="Start"/>
+
+                <Editor 
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="Start"
+                    Keyboard="Numeric"
+                    Margin="0, 0, 0, 15"
+                    x:Name="cedula"/>
+
+                <Label 
+                    Text="&#xf3e0; Nombre:"
+                    FontFamily="FAS"
+                    x:Name="lblnombre"
+                    FontSize="Large"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="Start"/>
+
+                <Editor 
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="Start"
+                    Keyboard="Numeric"
+                    Margin="0, 0, 0, 15"
+                    x:Name="nombre"/>
+
+                <Button 
+                    Text="Solicitar &#xf061;"
+                    x:Name="btnsolicitar"
+                    FontFamily="FAS"
+                    CornerRadius="10"
+                    HorizontalOptions="Fill"
+                    BackgroundColor="#1967a9"
+                    TextColor="White"
+                    BorderColor="Black"
+                    BorderWidth="1"
+                    Margin="0,15,0,0"
+                    Clicked="btnsolicitar_Clicked"
+                    FontSize="Large"/>
+            </VerticalStackLayout>
+        </ScrollView>
+        <Grid
+            x:Name="grilla"
+            IsVisible="False"
+            Opacity=".8"
+            BackgroundColor="Black">
+            <ActivityIndicator
+                x:Name="spin"
+                IsRunning="True"
+                HorizontalOptions="Center">
+            </ActivityIndicator>
+        </Grid>
+    </Grid>
+</ContentPage>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TaxistasMaui.HomeMaster"
+             xmlns:local="clr-namespace:TaxistasMaui.Modelos"
+             xmlns:pages="clr-namespace:TaxistasMaui"
+             Title="HomeMaster">
+    <StackLayout>
+        <!-- Header with user info -->
+        <Grid BackgroundColor="#03A9F5">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.4*"/>
+                <ColumnDefinition Width="0.6*" />
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <Image Aspect="AspectFill"
+                   Grid.Column="0"
+                   Grid.Row="0"
+                   Grid.RowSpan="2"
+                   x:Name="imgfoto"/>
+
+            <Label VerticalOptions="Center"
+                   HorizontalOptions="Center"
+                   HorizontalTextAlignment="Center"
+                   Grid.Column="1"
+                   Grid.Row="0"
+                   TextColor="White"
+                   x:Name="lbluser"
+                   FontFamily="FAS"/>
+
+            <Label VerticalOptions="Center"
+                   HorizontalOptions="Center"
+                   HorizontalTextAlignment="Center"
+                   TextColor="White"
+                   Grid.Column="1"
+                   Grid.Row="1"
+                   x:Name="lblnombres"
+                   FontFamily="FAS"/>
+        </Grid>
+
+        <!-- CollectionView that scrolls itself -->
+        <CollectionView x:Name="collectionView"
+                        x:FieldModifier="public"
+                        VerticalOptions="FillAndExpand"
+                        HorizontalOptions="FillAndExpand"
+                        SelectionMode="Single">
+            <CollectionView.ItemsSource>
+                <x:Array Type="{x:Type local:FlyoutPageItem}">
+                    <local:FlyoutPageItem Title="&#xf1ba; Inicio" Id="0" TargetType="{x:Type pages:HomeDetail}" />
+                    <local:FlyoutPageItem Title="&#xf1da; Historial" Id="1" TargetType="{x:Type pages:Historial}" />
+                    <local:FlyoutPageItem Title="&#xf0e0; Mensajes" Id="2" TargetType="{x:Type pages:Mensajes}" />
+                    <local:FlyoutPageItem Title="&#xf007; Cuenta" Id="3" TargetType="{x:Type pages:Cuenta}" />
+                    <local:FlyoutPageItem Title="&#xf079; Recargar" Id="4" TargetType="{x:Type pages:Recargar}" />
+                    <local:FlyoutPageItem Title="&#xf15b; Trámites" Id="8" TargetType="{x:Type pages:Tramite}" />
+                    <local:FlyoutPageItem Title="&#xf505; Política de privacidad" Id="6" TargetType="{x:Type pages:Privacidad}" />
+                    <local:FlyoutPageItem Title="&#xf52b; Salir" Id="7" TargetType="{x:Type pages:Privacidad}" />
+                </x:Array>
+            </CollectionView.ItemsSource>
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Grid Padding="5,10">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Label Margin="10,0"
+                               Text="{Binding Title}"
+                               TextColor="#0E9FE2"
+                               FontSize="20"
+                               FontFamily="FAS"
+                               FontAttributes="Bold"
+                               VerticalOptions="Center" />
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+    </StackLayout>
+</ContentPage>

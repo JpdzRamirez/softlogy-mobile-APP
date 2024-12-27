@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TaxistasMaui.WebPage">
+    <NavigationPage.TitleView>
+        <StackLayout Orientation="Horizontal">
+            <Label 
+            FontFamily="FAS"
+            FontSize="Title"
+            Text="&#xf0c9; "
+            VerticalOptions="CenterAndExpand">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer 
+                     NumberOfTapsRequired="1"
+                    Tapped="TapGestureRecognizer_Tapped"/>
+                </Label.GestureRecognizers>
+            </Label>
+            <Label
+            VerticalOptions="CenterAndExpand"
+            VerticalTextAlignment="Center"
+            Text="Financiera CAHORS"
+            FontSize="Title"/>
+        </StackLayout>
+    </NavigationPage.TitleView>
+    <VerticalStackLayout 
+        VerticalOptions="FillAndExpand"
+        HorizontalOptions="FillAndExpand">
+
+        <WebView 
+            x:Name="weblogin"
+            HorizontalOptions="FillAndExpand"
+            HeightRequest="1000" 
+            WidthRequest="1000"
+            VerticalOptions="FillAndExpand"/>
+    </VerticalStackLayout>
+</ContentPage>

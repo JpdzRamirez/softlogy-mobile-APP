@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TaxistasMaui.Modales.Rutas"
+             Title="Rutas">
+    <Grid
+        Padding="10">
+        <ScrollView  
+            VerticalOptions="FillAndExpand">
+            
+            <StackLayout 
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="FillAndExpand">
+
+                <Label 
+                    Text="COBRO RUTAS"
+                    TextColor="#1967a9"      
+                    FontAttributes="Bold"
+                    FontFamily="FAS"
+                    Margin="0,0,0,50"
+                    FontSize="Title"
+                    HorizontalOptions="CenterAndExpand" />
+
+                <Label 
+                    Text="&#xf084; Contraseña del vale"
+                    Margin="0,20,0,0"
+                    FontFamily="FAS"
+                    FontSize="Large"
+                    x:Name="lblrutavale"
+                    HorizontalOptions="CenterAndExpand"
+                    IsVisible="True"/>
+
+                <Entry  
+                    x:Name="txtrutavale"
+                    Margin="15,0,15,0"
+                    HorizontalOptions="FillAndExpand"
+                    IsVisible="True"/>
+
+                <Label 
+                    Text="&#xf018; Seleccionar ruta"
+                    FontFamily="FAS"
+                    FontSize="Large"
+                    HorizontalOptions="CenterAndExpand"
+                    Margin="0,20,0,0"/>
+
+                <Picker 
+                    x:Name="selectrutas"
+                    Margin="15,0,15,0"
+                    HorizontalOptions="FillAndExpand"/>
+
+                <StackLayout
+                    Orientation="Horizontal"
+                    Margin="0,30,0,0"
+                    VerticalOptions="StartAndExpand"
+                    HorizontalOptions="FillAndExpand">
+
+                    <Button 
+                        x:Name="btnnorutas"
+                        Text="Cancelar"
+                        HeightRequest="65"
+                        FontAttributes="Bold"
+                        BackgroundColor="LightGray"
+                        VerticalOptions="FillAndExpand"
+                        HorizontalOptions="FillAndExpand"
+                        Clicked="btnnorutas_Clicked"/>
+
+                    <Button  
+                        x:Name="btnokrutas"
+                        Clicked="btnokrutas_Clicked"
+                        Text="Aceptar"
+                        FontAttributes="Bold"
+                        BackgroundColor="#31D03B"
+                        HeightRequest="65"
+                        VerticalOptions="FillAndExpand"
+                        HorizontalOptions="FillAndExpand"/>
+
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+        <Grid
+            x:Name="grillacobrar"
+            IsVisible="False"
+            Opacity=".8"
+            BackgroundColor="Black">
+            
+            <ActivityIndicator
+                x:Name="spincobrar"
+                IsRunning="True"
+                HorizontalOptions="Center">
+            </ActivityIndicator>
+        </Grid>
+
+    </Grid>
+</ContentPage>

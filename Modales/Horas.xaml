@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TaxistasMaui.Modales.Horas"
+             Title="Horas">
+    <Grid
+        Padding="10">
+        <ScrollView  
+            VerticalOptions="FillAndExpand">
+            <StackLayout 
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="FillAndExpand">
+
+                <Label 
+                    Text="COBRO HORAS"
+                    TextColor="#1967a9"      
+                    FontAttributes="Bold"
+                    FontFamily="FAS"
+                    Margin="0,0,0,50"
+                    FontSize="Title"
+                    HorizontalOptions="CenterAndExpand" />
+
+                <Label 
+                    Text="&#xf084; Contraseña del vale"
+                    Margin="0,20,0,0"
+                    FontFamily="FAS"
+                    FontSize="Large"
+                    x:Name="lblhoravale"
+                    HorizontalOptions="CenterAndExpand"
+                    IsVisible="False"/>
+
+                <Entry  
+                    x:Name="txthoravale"
+                    Margin="15,0,15,0"
+                    HorizontalOptions="FillAndExpand"
+                    IsVisible="False"/>
+
+                <Label 
+                    Text="&#xf017; Total de Minutos" 
+                    FontFamily="FAS"
+                    FontSize="Large"
+                    HorizontalOptions="CenterAndExpand"
+                    Margin="0,20,0,0"/>
+
+                <Entry 
+                    Keyboard="Numeric"
+                    Margin="15,0,15,0"
+                    x:Name="txthoras"
+                    HorizontalOptions="FillAndExpand"/>
+
+                <Label 
+                    Text="&#xf017; Total de Minutos Espera" 
+                    FontFamily="FAS"
+                    FontSize="Large"
+                    HorizontalOptions="CenterAndExpand"
+                    Margin="0,20,0,0"/>
+
+                <Entry 
+                    Keyboard="Numeric"
+                    Margin="15,0,15,0"
+                   x:Name="txtespera"
+                   HorizontalOptions="FillAndExpand"/>
+
+                <StackLayout
+                    Orientation="Horizontal"
+                    Margin="0,30,0,0"
+                    VerticalOptions="StartAndExpand"
+                    HorizontalOptions="FillAndExpand">
+
+                    <Button 
+                        x:Name="btnnohoras"
+                        Text="Cancelar"
+                        HeightRequest="65"
+                        FontAttributes="Bold"
+                        BackgroundColor="LightGray"
+                        VerticalOptions="FillAndExpand"
+                        HorizontalOptions="FillAndExpand"
+                        Clicked="btnnohoras_Clicked"/>
+
+                    <Button  
+                        x:Name="btnokhoras"
+                        Clicked="btnokhoras_Clicked"
+                        Text="Aceptar"
+                        FontAttributes="Bold"
+                        BackgroundColor="#31D03B"
+                        HeightRequest="65"
+                        VerticalOptions="FillAndExpand"
+                        HorizontalOptions="FillAndExpand"/>
+
+                </StackLayout>
+
+            </StackLayout>
+        </ScrollView>
+        <Grid
+            x:Name="grillacobrar"
+            IsVisible="False"
+            Opacity=".8"
+            BackgroundColor="Black">
+
+            <ActivityIndicator
+                x:Name="spincobrar"
+                IsRunning="True"
+                HorizontalOptions="Center">
+            </ActivityIndicator>
+        </Grid>
+    </Grid>
+</ContentPage>

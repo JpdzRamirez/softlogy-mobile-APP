@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TaxistasMaui.ServiciosDisponibles"
+             Title="Servicios disponibles"
+             NavigationPage.HasBackButton="False">
+    <Grid 
+        x:Name="stackdispo">
+        
+        <VerticalStackLayout>
+
+            <ListView 
+                x:Name="lstservicios"
+                HasUnevenRows="True"
+                ItemSelected="Lstservicios_ItemSelected"
+                VerticalOptions="FillAndExpand">
+
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <VerticalStackLayout
+                                Spacing="1">
+
+                                <Label 
+                                    Text="{Binding direccion}"
+                                    FontSize="24"
+                                    FontAttributes="Bold"
+                                    Margin="0,0,0,0"
+                                    VerticalOptions="StartAndExpand"/>
+                                <Label 
+                                    Text="{Binding pago}"
+                                    VerticalOptions="StartAndExpand"
+                                    TextColor="Blue"
+                                    FontAttributes="Bold"
+                                    Margin="0,0,0,0"
+                                    FontSize="22"/>
+                            </VerticalStackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </VerticalStackLayout>
+
+        <Grid
+            x:Name="grillalogin"
+            IsVisible="False"
+            Opacity=".8"
+            BackgroundColor="Black">
+
+            <ActivityIndicator
+                x:Name="spin"
+                IsRunning="True"
+                HorizontalOptions="Center">
+            </ActivityIndicator>
+        </Grid>
+    </Grid>
+</ContentPage>

@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="TAXISEGURO"
+             NavigationPage.HasBackButton="False"
+             x:Class="TaxistasMaui.MainPage">
+
+    <Grid x:Name="stackmain">
+        <ScrollView 
+            Margin="0,0,0,10">
+            <StackLayout Padding="10">
+                <Grid 
+                HorizontalOptions="FillAndExpand" 
+                VerticalOptions="CenterAndExpand">
+                    <Label 
+                        Text="TAXISEGURO CONDUCTOR" 
+                        HorizontalOptions="Center" 
+                        VerticalOptions="Center" 
+                        FontFamily="Georgia" 
+                        FontSize="Large" 
+                        TextColor="#1967a9" 
+                        FontAttributes="Bold"
+                        HorizontalTextAlignment="Center"
+                        VerticalTextAlignment="Center"/>
+                </Grid>
+                <Image 
+                     Aspect="AspectFit"
+                     HeightRequest="150"
+                     WidthRequest="200"
+                     x:Name="imgtaxi"
+                     Margin="0,30,0,30"
+                     Source="taxiseguro.png"
+                     HorizontalOptions="CenterAndExpand" />
+                <Frame
+                    Padding="8"
+                    Margin="10,10,10,0"
+                    HasShadow="True"
+                    WidthRequest="300"
+                    HorizontalOptions="FillAndExpand">
+
+                    <Grid>
+                        <Label
+                            Text="&#xf007; Identificacion"
+                            FontFamily="FAS"
+                            FontSize="22"
+                            TextColor="Gray"
+                            TranslationY="0"
+                            Opacity="0.7"
+                            x:Name="lblIdentificacion"
+                            VerticalOptions="Center"
+                            HorizontalOptions="Start"/>
+
+                           <Entry 
+                           VerticalOptions="Center"
+                           FontFamily="FAS"
+                           FontSize="22"
+                           Keyboard="Numeric"
+                           BackgroundColor="Transparent"
+                           HorizontalOptions="FillAndExpand"
+                           x:Name="txtidentificacion" 
+                           Focused="OnEntryFocused"
+                           Unfocused="OnEntryUnfocused"/>
+                    </Grid>
+                </Frame>
+
+                    <Frame
+                    Padding="8"
+                    Margin="10,30,10,20"
+                    HasShadow="True"
+                    WidthRequest="300"
+                    HorizontalOptions="FillAndExpand">
+
+                    <Grid>
+                        <Label
+                            Text="&#xf084; Contraseña"
+                            FontFamily="FAS"
+                            FontSize="22"
+                            TextColor="Gray"
+                            TranslationY="0"
+                            Opacity="0.7"
+                            x:Name="lblClave"
+                            VerticalOptions="Center"
+                            HorizontalOptions="Start"/>
+
+                        <Entry 
+                            VerticalOptions="Center"
+                            FontFamily="FAS"
+                            FontSize="22"
+                           BackgroundColor="Transparent"
+                           IsPassword="True"
+                           HorizontalOptions="FillAndExpand"
+                           x:Name="txtclave"
+                           Focused="OnEntryFocused"
+                           Unfocused="OnEntryUnfocused" />
+                    </Grid>
+                                </Frame>
+
+
+                <HorizontalStackLayout
+                    HorizontalOptions="Center"
+                    VerticalOptions="CenterAndExpand">
+
+                                    <CheckBox 
+                        HorizontalOptions="Center"
+                        Scale="1.5"
+                        IsChecked="True"
+                        x:Name="checklogin" />
+
+                                    <Label 
+                        Text="Recordarme"
+                        x:Name="lblrecordar"
+                        FontSize="Large"
+                        VerticalOptions="CenterAndExpand"
+                        HorizontalOptions="Center"
+                        FontAttributes="Bold"/>
+                </HorizontalStackLayout>
+                <Frame
+                HasShadow="True"
+                CornerRadius="10"
+                Padding="0"
+                Margin="10,30,10,0"
+                HorizontalOptions="Center"
+                VerticalOptions="Center">
+                    <Button 
+                    Text="Entrar  &#xf2f6;"
+                    FontFamily="FAS"
+                    FontSize="Large"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Fill"
+                    BackgroundColor="#1967a9"
+                    CornerRadius="10"
+                    TextColor="White"
+                    BorderColor="#1967a9"
+                    WidthRequest="200"
+                    BorderWidth="1"
+                    x:Name="btnentrar"
+                    Clicked="Btnentrar_Clicked"/>
+                </Frame>
+
+
+                <Button 
+                    Text="Política de Privacidad"
+                    x:Name="btnprivacidad"
+                    Clicked="btnprivacidad_Clicked"
+                    VerticalOptions="End"
+                    TextColor="#1967a9"
+                    BackgroundColor="Transparent"
+                    Margin="15,40,15,15"/>
+            </StackLayout>
+
+        </ScrollView>
+
+        <Grid
+            x:Name="grillalogin"
+            IsVisible="False"
+            Opacity=".8"
+            BackgroundColor="Black">
+            <ActivityIndicator
+                x:Name="spin"
+                IsRunning="True"
+                HorizontalOptions="Center">
+            </ActivityIndicator>
+        </Grid>
+    </Grid>
+
+</ContentPage>

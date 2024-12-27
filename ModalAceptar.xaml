@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TaxistasMaui.ModalAceptar"
+             Title="ModalAceptar">
+    <Grid
+        RowDefinitions="*, Auto"
+        Padding="20"
+        x:Name="modalservicio">
+
+        <!-- El ScrollView ocupa la primera fila -->
+        <ScrollView 
+            Grid.Row="0"
+            VerticalOptions="FillAndExpand">
+
+            <VerticalStackLayout 
+                VerticalOptions="CenterAndExpand"
+                HorizontalOptions="FillAndExpand">
+
+                <!-- Contenido del modal -->
+                <Label 
+                    Text="&#xf1ba;  NUEVO SERVICIO"
+                    FontSize="26"
+                    FontFamily="FAS"
+                    TextColor="#1967a9"
+                    FontAttributes="Bold"
+                    VerticalOptions="Start"
+                    HorizontalTextAlignment="Center"
+                    HorizontalOptions="CenterAndExpand"
+                    Margin="0,0,0,10"/>
+
+                <BoxView 
+                    HeightRequest="5" 
+                    BackgroundColor="#23AAF2" 
+                    HorizontalOptions="FillAndExpand"/>
+
+                <Label 
+                    Text="&#xf007;  Angel Duban Perez Bonilla--3023913768"
+                    FontFamily="FAS"
+                    x:Name="lblnombrecliente"
+                    FontSize="Large"
+                    Margin="0,20,0,0"
+                    FontAttributes="Bold"
+                    VerticalOptions="Start"
+                    HorizontalOptions="CenterAndExpand"
+                    HorizontalTextAlignment="Center"/>
+
+                <BoxView 
+                    HeightRequest="2" 
+                    BackgroundColor="#23AAF2" 
+                    Margin="0,0,0,40" 
+                    HorizontalOptions="FillAndExpand"/>
+
+                <Label 
+                    Text="&#xf041;  CL 31 No 35C- 55, MIRADOR DEL ORIENTE"
+                    FontFamily="FAS"
+                    x:Name="lbldireccion"
+                    FontSize="Large"
+                    FontAttributes="Bold"
+                    VerticalOptions="Start"
+                    HorizontalOptions="CenterAndExpand"
+                    HorizontalTextAlignment="Center"/>
+
+                <BoxView 
+                    HeightRequest="2" 
+                    BackgroundColor="#23AAF2" 
+                    Margin="0,0,0,40" 
+                    HorizontalOptions="FillAndExpand"/>
+
+                <Label 
+                    Text="&#xf0d6;  Vale electrónico, Unidades"
+                    FontFamily="FAS"
+                    x:Name="lblpago"
+                    FontSize="Large"
+                    FontAttributes="Bold"
+                    VerticalOptions="Start"
+                    HorizontalOptions="CenterAndExpand"
+                    HorizontalTextAlignment="Center"/>
+
+                <BoxView 
+                    HeightRequest="2" 
+                    BackgroundColor="#23AAF2" 
+                    Margin="0,0,0,40" 
+                    HorizontalOptions="FillAndExpand"/>
+
+                <Label 
+                    x:Name="lblobservaciones"
+                    FontSize="Large"
+                    FontFamily="FAS"
+                    IsVisible="False"
+                    FontAttributes="Bold"
+                    VerticalOptions="Start"
+                    Text="&#xf27a;  llevar otro usuario para la casa hacia zona franca"
+                    HorizontalOptions="CenterAndExpand"
+                    HorizontalTextAlignment="Center"/>
+
+                <BoxView 
+                    HeightRequest="2" 
+                    x:Name="boxobservaciones" 
+                    IsVisible="False" 
+                    BackgroundColor="#23AAF2" 
+                    Margin="0,0,0,20" 
+                    HorizontalOptions="FillAndExpand"/>
+
+            </VerticalStackLayout>
+        </ScrollView>
+
+        <!-- El botón ocupa la segunda fila -->
+        <Button 
+            Grid.Row="1"
+            x:Name="btnaceptar"
+            Text="&#xf00c; Aceptar servicio"
+            FontFamily="FAS"
+            FontSize="Large"
+            BackgroundColor="#31D03B"
+            HeightRequest="70"
+            VerticalOptions="End"
+            HorizontalOptions="FillAndExpand"
+            Clicked="btnaceptar_Clicked"/>
+
+    </Grid>
+</ContentPage>

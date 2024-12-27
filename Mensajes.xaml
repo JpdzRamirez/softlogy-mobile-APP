@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TaxistasMaui.Mensajes"
+             x:Name="stacksms">
+    <NavigationPage.TitleView>
+        <StackLayout 
+            Orientation="Horizontal">
+            
+            <Label 
+                FontFamily="FAS"
+                FontSize="Title"
+                Text="&#xf0c9; "
+                VerticalOptions="CenterAndExpand">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer 
+                     NumberOfTapsRequired="1"
+                    Tapped="TapGestureRecognizer_Tapped"/>
+                </Label.GestureRecognizers>
+            </Label>
+            
+            <Label
+                VerticalOptions="CenterAndExpand"
+                VerticalTextAlignment="Center"
+                Text="Mensajes"
+                FontSize="Title"/>
+        </StackLayout>
+    </NavigationPage.TitleView>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="60" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.85*" />
+            <ColumnDefinition Width="0.15*" />
+        </Grid.ColumnDefinitions>
+
+        <ScrollView 
+            Grid.Row="0"
+            Grid.Column="0"
+            Grid.ColumnSpan="2"
+            x:Name="scroll" 
+            VerticalOptions="Fill">
+
+            <VerticalStackLayout 
+                x:Name="stack">
+            </VerticalStackLayout>
+        </ScrollView>
+
+        <Entry 
+            Grid.Row="1"
+            Grid.Column="0"
+            Placeholder="Escribe tu mensaje"
+            HorizontalOptions="FillAndExpand"
+            x:Name="txttexto"/>
+
+        <Button 
+            Grid.Row="1"
+            Grid.Column="1"
+            x:Name="btnenviar"
+            FontFamily="FAS"
+            FontSize="Title"
+            Text="&#xf075; "
+            Clicked="Btnenviar_Clicked"
+            HorizontalOptions="FillAndExpand"/>
+    </Grid>
+</ContentPage>

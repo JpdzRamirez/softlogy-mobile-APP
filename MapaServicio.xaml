@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TaxistasMaui.MapaServicio"
+             xmlns:maps="http://schemas.microsoft.com/dotnet/2021/maui/maps"
+             NavigationPage.HasBackButton="False">
+    <NavigationPage.TitleView>
+        <StackLayout Orientation="Horizontal">
+            <Label 
+            FontFamily="FAS"
+            FontSize="Title"
+            Text="&#xf0c9; "
+            VerticalOptions="CenterAndExpand">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer 
+                     NumberOfTapsRequired="1"
+                    Tapped="TapGestureRecognizer_Tapped"/>
+                </Label.GestureRecognizers>
+            </Label>
+            <Label
+            VerticalOptions="CenterAndExpand"
+            VerticalTextAlignment="Center"
+            Text="Servicio Tomado"
+            FontSize="Title"/>
+        </StackLayout>
+    </NavigationPage.TitleView>
+
+    <Grid
+        Padding="10"
+        x:Name="stackmapa">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="70" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <ScrollView
+            Grid.Row="0"
+            Grid.Column="0"
+            VerticalOptions="FillAndExpand"
+            HorizontalOptions="FillAndExpand">
+            <StackLayout
+                Orientation="Vertical"
+		        VerticalOptions="FillAndExpand"
+		        HorizontalOptions="FillAndExpand"
+                Padding="20">
+
+                <Label 
+                x:Name="lblempresa"
+                IsVisible="False"
+                FontSize="Medium"
+                FontAttributes="Bold"
+                VerticalOptions="Start"
+                HorizontalTextAlignment="Center"
+                HorizontalOptions="CenterAndExpand">
+
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span 
+                            Text=""
+                            TextDecorations="Underline" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+
+                <StackLayout 
+                    Orientation="Vertical"
+                    Padding="10"
+                    VerticalOptions="Start"
+                    HorizontalOptions="CenterAndExpand">
+
+                        <Label 
+                        Text="Pasajeros"
+                        FontSize="Large"
+                        FontAttributes="Bold"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Start"
+                        Margin="0,0,0,10" />
+
+                                <Frame 
+                                HasShadow="False" 
+                                CornerRadius="5" 
+                                BorderColor="#fff" 
+                                BackgroundColor="LightGray" 
+                                Padding="10" 
+                                VerticalOptions="Start"
+                                HorizontalOptions="FillAndExpand">
+                                        
+                                        <Label 
+                                        Text=""
+                                        x:Name="lblnombrecliente"
+                                        FontSize="Medium"
+                                        FontAttributes="Bold"
+                                        VerticalOptions="Start"
+                                        HorizontalOptions="CenterAndExpand"
+                                        BackgroundColor="Transparent"/>
+                                </Frame>
+                </StackLayout>
+                <StackLayout 
+                    Orientation="Vertical"
+                    Padding="10"
+                    VerticalOptions="Start"
+                    HorizontalOptions="CenterAndExpand">
+
+                    <Label 
+                        Text="Dirección"
+                        FontSize="Large"
+                        FontAttributes="Bold"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Start"
+                        Margin="0,0,0,10" />
+
+                                <Frame 
+                                HasShadow="False" 
+                                CornerRadius="5" 
+                                BorderColor="#fff" 
+                                BackgroundColor="LightGray" 
+                                Padding="10" 
+                                MaximumWidthRequest="240"
+                                VerticalOptions="Start"
+                                HorizontalOptions="FillAndExpand">
+
+                                    <Label 
+                                    Text=""
+		                            x:Name="lbldireccion"
+		                            FontSize="Medium"
+		                            FontAttributes="Bold"
+		                            VerticalOptions="Start"
+		                            HorizontalOptions="CenterAndExpand"
+                                    HorizontalTextAlignment="Center"/>
+                    </Frame>
+                </StackLayout>
+ 
+
+            <Label 
+            x:Name="lblobservaciones"
+			FontSize="Medium"
+			IsVisible="False"
+			FontAttributes="Bold"
+			VerticalOptions="Start"
+			HorizontalOptions="CenterAndExpand"
+			Text="" />
+
+            <Label 
+            Text=""
+			x:Name="lblpago"
+			FontSize="Medium"
+			FontAttributes="Bold"
+			VerticalOptions="Start"
+			HorizontalOptions="CenterAndExpand"
+			HorizontalTextAlignment="Center"/>
+
+            <Button 
+            x:Name="BtnPasajeros"
+            Clicked="BtnPasajeros_Clicked"
+            BackgroundColor="#31D03B"
+            Margin="0,5,0,0"
+            IsVisible="False"
+            CornerRadius="20"
+            HeightRequest="50"
+            FontSize="16"
+            Text="&#xf879;   Pasajeros"
+            WidthRequest="150"
+            HorizontalOptions="CenterAndExpand"
+            FontFamily="FAS" />
+
+            <Button 
+            x:Name="btncall" 
+            Margin="0,5,0,0"
+            BackgroundColor="#31D03B"
+            CornerRadius="20"
+            HeightRequest="50"
+            IsVisible="False"
+            FontSize="16"
+            Text="&#xf879;"
+            WidthRequest="150"
+            FontFamily="FAS"
+            Clicked="btncall_Clicked"
+            HorizontalOptions="CenterAndExpand"/>
+            </StackLayout>
+        </ScrollView>
+
+        <Frame 
+        Grid.Column="0"
+        Grid.Row="1"
+        CornerRadius="20" 
+        HasShadow="True"
+        Padding="0"
+        Margin="10"
+        BackgroundColor="White">
+            <maps:Map 
+            x:Name="mymap"              
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="FillAndExpand"
+            IsShowingUser="True"
+            MapType="Street" />
+        </Frame>
+
+
+        <StackLayout 
+       Grid.Column="0"
+       Grid.Row="2"
+       VerticalOptions="End"
+       Orientation="Horizontal"
+       HorizontalOptions="FillAndExpand">
+
+            <Button 
+        x:Name="btnarribo"                    
+        Text="&#xf5af; Notificar arribo"
+        BackgroundColor="Yellow"
+        TextColor="#000000"
+        FontFamily="FAS"
+        HeightRequest="65"
+        FontAttributes="Bold"
+        VerticalOptions="CenterAndExpand"
+        HorizontalOptions="FillAndExpand"
+        Clicked="Btnarribo_Clicked"/>
+
+            <BoxView 
+        WidthRequest="5"
+        BackgroundColor="Transparent" />
+
+            <Button 
+        x:Name="btnfin"
+        IsVisible="False"
+        Text="&#xf11e; Finalizar servicio"
+        FontFamily="FAS"
+        BackgroundColor="#31D03B"
+        HeightRequest="65"
+        VerticalOptions="FillAndExpand"
+        HorizontalOptions="FillAndExpand"
+        Clicked="Btnfin_Clicked" />
+
+            <BoxView 
+        WidthRequest="5"
+        BackgroundColor="Transparent" />
+
+            <Button 
+        x:Name="btncancelar"
+        Text="&#xf05e; Cancelar servicio"
+        FontFamily="FAS"                
+        BackgroundColor="#FB101E"
+        HeightRequest="65"
+        VerticalOptions="CenterAndExpand"
+        HorizontalOptions="FillAndExpand"
+        Clicked="Btncancelar_Clicked"
+        FontAttributes="Bold"
+        TextColor="WhiteSmoke"/>
+
+        </StackLayout>
+    </Grid>
+</ContentPage>
