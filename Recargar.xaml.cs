@@ -1,8 +1,8 @@
 using System.Collections;
 using System.Globalization;
-using TaxistasMaui.Interfaces;
+using SoftlogyMaui.Interfaces;
 
-namespace TaxistasMaui;
+namespace SoftlogyMaui;
 
 public partial class Recargar : ContentPage
 {

@@ -1,8 +1,8 @@
 ﻿using Android.Content;
 using Android.Media;
-using TaxistasMaui.Interfaces;
+using SoftlogyMaui.Interfaces;
 
-namespace TaxistasMaui.Platforms.Droid
+namespace SoftlogyMaui.Platforms.Droid
 {
     public class VolumeService : IUpVolume
     {

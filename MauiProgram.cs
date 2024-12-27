@@ -1,8 +1,8 @@
 ﻿using Microsoft.Extensions.Logging;
-using TaxistasMaui.Interfaces;
-using TaxistasMaui.Platforms.Droid;
+using SoftlogyMaui.Interfaces;
+using SoftlogyMaui.Platforms.Droid;
 
-namespace TaxistasMaui
+namespace SoftlogyMaui
 {
     public static class MauiProgram
     {

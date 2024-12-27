@@ -1,4 +1,4 @@
-namespace TaxistasMaui;
+namespace SoftlogyMaui;
 
 public partial class Tramite : ContentPage
 {

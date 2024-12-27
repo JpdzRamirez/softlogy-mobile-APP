@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             Title="TAXISEGURO"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"                          
              NavigationPage.HasBackButton="False"
-             x:Class="TaxistasMaui.MainPage">
+             Title="Softlogy HelpDesk"
+             x:Class="SoftlogyMaui.MainPage">
 
     <Grid x:Name="stackmain">
         <ScrollView 
@@ -13,7 +13,7 @@
                 HorizontalOptions="FillAndExpand" 
                 VerticalOptions="CenterAndExpand">
                     <Label 
-                        Text="TAXISEGURO CONDUCTOR" 
+                        Text="Softlogy HelpDesk" 
                         HorizontalOptions="Center" 
                         VerticalOptions="Center" 
                         FontFamily="Georgia" 
@@ -29,7 +29,7 @@
                      WidthRequest="200"
                      x:Name="imgtaxi"
                      Margin="0,30,0,30"
-                     Source="taxiseguro.png"
+                     Source="softlogy.png"
                      HorizontalOptions="CenterAndExpand" />
                 <Frame
                     Padding="8"
@@ -40,13 +40,13 @@
 
                     <Grid>
                         <Label
-                            Text="&#xf007; Identificacion"
+                            Text="&#xf007; Usuario"
                             FontFamily="FAS"
                             FontSize="22"
                             TextColor="Gray"
                             TranslationY="0"
                             Opacity="0.7"
-                            x:Name="lblIdentificacion"
+                            x:Name="lblusername"
                             VerticalOptions="Center"
                             HorizontalOptions="Start"/>
 
@@ -57,7 +57,7 @@
                            Keyboard="Numeric"
                            BackgroundColor="Transparent"
                            HorizontalOptions="FillAndExpand"
-                           x:Name="txtidentificacion" 
+                           x:Name="txtusername" 
                            Focused="OnEntryFocused"
                            Unfocused="OnEntryUnfocused"/>
                     </Grid>
@@ -78,7 +78,7 @@
                             TextColor="Gray"
                             TranslationY="0"
                             Opacity="0.7"
-                            x:Name="lblClave"
+                            x:Name="lblpassword"
                             VerticalOptions="Center"
                             HorizontalOptions="Start"/>
 
@@ -89,7 +89,7 @@
                            BackgroundColor="Transparent"
                            IsPassword="True"
                            HorizontalOptions="FillAndExpand"
-                           x:Name="txtclave"
+                           x:Name="txtpassword"
                            Focused="OnEntryFocused"
                            Unfocused="OnEntryUnfocused" />
                     </Grid>

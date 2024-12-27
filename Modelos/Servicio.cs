@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System.ComponentModel;
 
-namespace TaxistasMaui.Modelos
+namespace SoftlogyMaui.Modelos
 {
     public class Servicio
     {

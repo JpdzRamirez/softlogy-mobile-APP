@@ -1,7 +1,7 @@
 using Newtonsoft.Json;
-using TaxistasMaui.Modelos;
+using SoftlogyMaui.Modelos;
 
-namespace TaxistasMaui;
+namespace SoftlogyMaui;
 
 public partial class Historial : ContentPage
 {

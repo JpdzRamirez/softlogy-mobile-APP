@@ -1,10 +1,10 @@
 using CommunityToolkit.Mvvm.Messaging;
 using Newtonsoft.Json;
 using System.Collections.ObjectModel;
-using TaxistasMaui.Interfaces;
-using TaxistasMaui.Modelos;
+using SoftlogyMaui.Interfaces;
+using SoftlogyMaui.Modelos;
 
-namespace TaxistasMaui;
+namespace SoftlogyMaui;
 
 public partial class ServiciosDisponibles : ContentPage
 {

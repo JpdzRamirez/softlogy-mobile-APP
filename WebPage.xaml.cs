@@ -1,4 +1,4 @@
-namespace TaxistasMaui;
+namespace SoftlogyMaui;
 
 public partial class WebPage : ContentPage
 {
@@ -6,7 +6,7 @@ public partial class WebPage : ContentPage
 	{
 		InitializeComponent();
         //weblogin.Source = "http://192.168.3.70:8000/autologin_conductor/" + App.Current.Properties["doctaxista"].ToString();
-        weblogin.Source = "http://credit.cahors.co/autologin_conductor/" + Preferences.Get("doctaxista", "0").ToString();
+        weblogin.Source = "http://softlogy.helpdesk.co/autologin_client/" + Preferences.Get("doctaxista", "0").ToString();
         weblogin.Reload();
     }
 

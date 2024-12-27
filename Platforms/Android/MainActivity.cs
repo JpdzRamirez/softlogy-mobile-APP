@@ -5,11 +5,11 @@ using Android.OS;
 using Android.Views;
 using static Android.OS.PowerManager;
 using Android.Provider;
-using TaxistasMaui.Platforms.Droid;
+using SoftlogyMaui.Platforms.Droid;
 using CommunityToolkit.Mvvm.Messaging;
-using TaxistasMaui.Modelos;
+using SoftlogyMaui.Modelos;
 
-namespace TaxistasMaui
+namespace SoftlogyMaui
 {
     [Activity(Theme = "@style/Maui.SplashTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation | ConfigChanges.UiMode | ConfigChanges.ScreenLayout | ConfigChanges.SmallestScreenSize | ConfigChanges.Density)]
     public class MainActivity : MauiAppCompatActivity

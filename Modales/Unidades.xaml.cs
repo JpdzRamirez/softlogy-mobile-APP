@@ -2,9 +2,9 @@ using CommunityToolkit.Mvvm.Messaging;
 using Newtonsoft.Json;
 using System.Collections;
 using System.Globalization;
-using TaxistasMaui.Modelos;
+using SoftlogyMaui.Modelos;
 
-namespace TaxistasMaui.Modales;
+namespace SoftlogyMaui.Modales;
 
 public partial class Unidades : ContentPage
 {

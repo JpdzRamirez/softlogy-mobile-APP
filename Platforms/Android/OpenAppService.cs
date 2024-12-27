@@ -1,7 +1,7 @@
 ﻿using Android.Content;
-using TaxistasMaui.Interfaces;
+using SoftlogyMaui.Interfaces;
 
-namespace TaxistasMaui.Platforms.Droid
+namespace SoftlogyMaui.Platforms.Droid
 {
     public class OpenAppService : IOpenAppService
     {

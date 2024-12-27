@@ -1,4 +1,4 @@
-﻿namespace TaxistasMaui.Interfaces
+﻿namespace SoftlogyMaui.Interfaces
 {
     public interface IToastService
     {

@@ -1,6 +1,6 @@
 ﻿using Foundation;
 
-namespace TaxistasMaui
+namespace SoftlogyMaui
 {
     [Register("AppDelegate")]
     public class AppDelegate : MauiUIApplicationDelegate

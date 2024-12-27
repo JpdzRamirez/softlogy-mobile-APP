@@ -1,8 +1,8 @@
 using Newtonsoft.Json;
 using System.Text.RegularExpressions;
-using TaxistasMaui.Modelos;
+using SoftlogyMaui.Modelos;
 
-namespace TaxistasMaui;
+namespace SoftlogyMaui;
 
 public partial class Mensajes : ContentPage
 {

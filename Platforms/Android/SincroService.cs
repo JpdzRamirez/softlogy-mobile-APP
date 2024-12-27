@@ -4,9 +4,9 @@ using Android.Content.PM;
 using Android.OS;
 using CommunityToolkit.Mvvm.Messaging;
 using Microsoft.Maui.Platform;
-using TaxistasMaui.Modelos;
+using SoftlogyMaui.Modelos;
 
-namespace TaxistasMaui.Platforms.Droid
+namespace SoftlogyMaui.Platforms.Droid
 {
     [Service(ForegroundServiceType = ForegroundService.TypeLocation)]
     public class SincroService : Service
@@ -84,8 +84,8 @@ namespace TaxistasMaui.Platforms.Droid
                 Notification.Builder notificationBuilder = new Notification.Builder(this, channelid);
                 #pragma warning restore CA1416 // Validar la compatibilidad de la plataforma
                 notification = notificationBuilder.SetOngoing(true)
-                    .SetSmallIcon(Resource.Mipmap.ic_taxiseguro)
-                    .SetContentTitle("Taxiseguro")
+                    .SetSmallIcon(Resource.Mipmap.ic_softlogy)
+                    .SetContentTitle("SoftlogyHLPD")
                     .SetContentText("Sincronizando...")
                     .SetShowWhen(false)
                     .SetCategory(Notification.CategoryService)
@@ -97,8 +97,8 @@ namespace TaxistasMaui.Platforms.Droid
                 Notification.Builder notificationBuilder = new Notification.Builder(this);
                 #pragma warning restore CA1422 // Validar la compatibilidad de la plataforma
                 notification = notificationBuilder.SetOngoing(true)
-                    .SetSmallIcon(Resource.Mipmap.ic_taxiseguro)
-                    .SetContentTitle("Taxiseguro")
+                    .SetSmallIcon(Resource.Mipmap.ic_softlogy)
+                    .SetContentTitle("SoftlogyHLPD")
                     .SetContentText("Sincronizando...")
                     .SetShowWhen(false)
                     .SetCategory(Notification.CategoryService)

@@ -1,7 +1,7 @@
 ﻿using Android.Widget;
-using TaxistasMaui.Interfaces;
+using SoftlogyMaui.Interfaces;
 
-namespace TaxistasMaui.Platforms.Droid
+namespace SoftlogyMaui.Platforms.Droid
 {
     public class ToastService : IToastService
     {

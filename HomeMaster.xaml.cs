@@ -1,4 +1,4 @@
-namespace TaxistasMaui;
+namespace SoftlogyMaui;
 
 public partial class HomeMaster : ContentPage
 {
@@ -12,7 +12,7 @@ public partial class HomeMaster : ContentPage
 
         if (base64 == "nofoto")
         {
-            imgfoto.Source = ImageSource.FromResource("TaxistasMaui.Recursos.foto.png", typeof(HomeMaster).Assembly);
+            imgfoto.Source = ImageSource.FromResource("SoftlogyMaui.Recursos.foto.png", typeof(HomeMaster).Assembly);
         }
         else
         {

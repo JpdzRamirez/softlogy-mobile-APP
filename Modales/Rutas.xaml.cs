@@ -1,8 +1,8 @@
 using CommunityToolkit.Mvvm.Messaging;
 using System.Globalization;
-using TaxistasMaui.Modelos;
+using SoftlogyMaui.Modelos;
 
-namespace TaxistasMaui.Modales;
+namespace SoftlogyMaui.Modales;
 
 public partial class Rutas : ContentPage
 {

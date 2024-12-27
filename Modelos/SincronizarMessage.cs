@@ -1,6 +1,6 @@
 ﻿using CommunityToolkit.Mvvm.Messaging.Messages;
 
-namespace TaxistasMaui.Modelos
+namespace SoftlogyMaui.Modelos
 {
     public class SincronizarMessage : ValueChangedMessage<string>
     {

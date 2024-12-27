@@ -1,4 +1,4 @@
-﻿namespace TaxistasMaui.Modelos
+﻿namespace SoftlogyMaui.Modelos
 {
     public class FlyoutPageItem
     {

@@ -1,9 +1,9 @@
 ﻿using Android.Content;
 using Android.OS;
-using TaxistasMaui.Interfaces;
+using SoftlogyMaui.Interfaces;
 using Android.Provider;
 
-namespace TaxistasMaui.Platforms.Droid
+namespace SoftlogyMaui.Platforms.Droid
 {
     public class BatteryService : IBatteryService
     {

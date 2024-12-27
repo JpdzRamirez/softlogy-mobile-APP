@@ -1,6 +1,6 @@
 using System.Reflection;
 
-namespace TaxistasMaui;
+namespace SoftlogyMaui;
 
 public partial class Calificar : ContentPage
 {
@@ -18,60 +18,60 @@ public partial class Calificar : ContentPage
         this.servicio = servicio;
         clientehttp = new HttpClient(httpHandler);
 
-        star1.Source = ImageSource.FromResource("TaxistasMaui.Recursos.star.png", asembly);
-        star2.Source = ImageSource.FromResource("TaxistasMaui.Recursos.stargris.png", asembly);
-        star3.Source = ImageSource.FromResource("TaxistasMaui.Recursos.stargris.png", asembly);
-        star4.Source = ImageSource.FromResource("TaxistasMaui.Recursos.stargris.png", asembly);
-        star5.Source = ImageSource.FromResource("TaxistasMaui.Recursos.stargris.png", asembly);
+        star1.Source = ImageSource.FromResource("SoftlogyMaui.Recursos.star.png", asembly);
+        star2.Source = ImageSource.FromResource("SoftlogyMaui.Recursos.stargris.png", asembly);
+        star3.Source = ImageSource.FromResource("SoftlogyMaui.Recursos.stargris.png", asembly);
+        star4.Source = ImageSource.FromResource("SoftlogyMaui.Recursos.stargris.png", asembly);
+        star5.Source = ImageSource.FromResource("SoftlogyMaui.Recursos.stargris.png", asembly);
     }
 
     private void star1_Clicked(object sender, EventArgs e)
     {
-        star1.Source = ImageSource.FromResource("TaxistasMaui.Recursos.star.png", asembly);
-        star2.Source = ImageSource.FromResource("TaxistasMaui.Recursos.stargris.png", asembly);
-        star3.Source = ImageSource.FromResource("TaxistasMaui.Recursos.stargris.png", asembly);
-        star4.Source = ImageSource.FromResource("TaxistasMaui.Recursos.stargris.png", asembly);
-        star5.Source = ImageSource.FromResource("TaxistasMaui.Recursos.stargris.png", asembly);
+        star1.Source = ImageSource.FromResource("SoftlogyMaui.Recursos.star.png", asembly);
+        star2.Source = ImageSource.FromResource("SoftlogyMaui.Recursos.stargris.png", asembly);
+        star3.Source = ImageSource.FromResource("SoftlogyMaui.Recursos.stargris.png", asembly);
+        star4.Source = ImageSource.FromResource("SoftlogyMaui.Recursos.stargris.png", asembly);
+        star5.Source = ImageSource.FromResource("SoftlogyMaui.Recursos.stargris.png", asembly);
         cal = 1;
     }
 
     private void star2_Clicked(object sender, EventArgs e)
     {
-        star1.Source = ImageSource.FromResource("TaxistasMaui.Recursos.star.png", asembly);
-        star2.Source = ImageSource.FromResource("TaxistasMaui.Recursos.star.png", asembly);
-        star3.Source = ImageSource.FromResource("TaxistasMaui.Recursos.stargris.png", asembly);
-        star4.Source = ImageSource.FromResource("TaxistasMaui.Recursos.stargris.png", asembly);
-        star5.Source = ImageSource.FromResource("TaxistasMaui.Recursos.stargris.png", asembly);
+        star1.Source = ImageSource.FromResource("SoftlogyMaui.Recursos.star.png", asembly);
+        star2.Source = ImageSource.FromResource("SoftlogyMaui.Recursos.star.png", asembly);
+        star3.Source = ImageSource.FromResource("SoftlogyMaui.Recursos.stargris.png", asembly);
+        star4.Source = ImageSource.FromResource("SoftlogyMaui.Recursos.stargris.png", asembly);
+        star5.Source = ImageSource.FromResource("SoftlogyMaui.Recursos.stargris.png", asembly);
         cal = 2;
     }
 
     private void star3_Clicked(object sender, EventArgs e)
     {
-        star1.Source = ImageSource.FromResource("TaxistasMaui.Recursos.star.png", asembly);
-        star2.Source = ImageSource.FromResource("TaxistasMaui.Recursos.star.png", asembly);
-        star3.Source = ImageSource.FromResource("TaxistasMaui.Recursos.star.png", asembly);
-        star4.Source = ImageSource.FromResource("TaxistasMaui.Recursos.stargris.png", asembly);
-        star5.Source = ImageSource.FromResource("TaxistasMaui.Recursos.stargris.png", asembly);
+        star1.Source = ImageSource.FromResource("SoftlogyMaui.Recursos.star.png", asembly);
+        star2.Source = ImageSource.FromResource("SoftlogyMaui.Recursos.star.png", asembly);
+        star3.Source = ImageSource.FromResource("SoftlogyMaui.Recursos.star.png", asembly);
+        star4.Source = ImageSource.FromResource("SoftlogyMaui.Recursos.stargris.png", asembly);
+        star5.Source = ImageSource.FromResource("SoftlogyMaui.Recursos.stargris.png", asembly);
         cal = 3;
     }
 
     private void star4_Clicked(object sender, EventArgs e)
     {
-        star1.Source = ImageSource.FromResource("TaxistasMaui.Recursos.star.png", asembly);
-        star2.Source = ImageSource.FromResource("TaxistasMaui.Recursos.star.png", asembly);
-        star3.Source = ImageSource.FromResource("TaxistasMaui.Recursos.star.png", asembly);
-        star4.Source = ImageSource.FromResource("TaxistasMaui.Recursos.star.png", asembly);
-        star5.Source = ImageSource.FromResource("TaxistasMaui.Recursos.stargris.png", asembly);
+        star1.Source = ImageSource.FromResource("SoftlogyMaui.Recursos.star.png", asembly);
+        star2.Source = ImageSource.FromResource("SoftlogyMaui.Recursos.star.png", asembly);
+        star3.Source = ImageSource.FromResource("SoftlogyMaui.Recursos.star.png", asembly);
+        star4.Source = ImageSource.FromResource("SoftlogyMaui.Recursos.star.png", asembly);
+        star5.Source = ImageSource.FromResource("SoftlogyMaui.Recursos.stargris.png", asembly);
         cal = 4;
     }
 
     private void star5_Clicked(object sender, EventArgs e)
     {
-        star1.Source = ImageSource.FromResource("TaxistasMaui.Recursos.star.png", asembly);
-        star2.Source = ImageSource.FromResource("TaxistasMaui.Recursos.star.png", asembly);
-        star3.Source = ImageSource.FromResource("TaxistasMaui.Recursos.star.png", asembly);
-        star4.Source = ImageSource.FromResource("TaxistasMaui.Recursos.star.png", asembly);
-        star5.Source = ImageSource.FromResource("TaxistasMaui.Recursos.star.png", asembly);
+        star1.Source = ImageSource.FromResource("SoftlogyMaui.Recursos.star.png", asembly);
+        star2.Source = ImageSource.FromResource("SoftlogyMaui.Recursos.star.png", asembly);
+        star3.Source = ImageSource.FromResource("SoftlogyMaui.Recursos.star.png", asembly);
+        star4.Source = ImageSource.FromResource("SoftlogyMaui.Recursos.star.png", asembly);
+        star5.Source = ImageSource.FromResource("SoftlogyMaui.Recursos.star.png", asembly);
         cal = 5;
     }
 

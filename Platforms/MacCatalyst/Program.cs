@@ -1,7 +1,7 @@
 ﻿using ObjCRuntime;
 using UIKit;
 
-namespace TaxistasMaui
+namespace SoftlogyMaui
 {
     public class Program
     {

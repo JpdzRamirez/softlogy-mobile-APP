@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="TaxistasMaui.HomeMaster"
-             xmlns:local="clr-namespace:TaxistasMaui.Modelos"
-             xmlns:pages="clr-namespace:TaxistasMaui"
+             x:Class="SoftlogyMaui.HomeMaster"
+             xmlns:local="clr-namespace:SoftlogyMaui.Modelos"
+             xmlns:pages="clr-namespace:SoftlogyMaui"
              Title="HomeMaster">
     <StackLayout>
         <!-- Header with user info -->

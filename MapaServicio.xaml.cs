@@ -2,11 +2,11 @@ using CommunityToolkit.Mvvm.Messaging;
 using Microsoft.Maui.Controls.Maps;
 using Microsoft.Maui.Maps;
 using Newtonsoft.Json;
-using TaxistasMaui.Modales;
-using TaxistasMaui.Modelos;
+using SoftlogyMaui.Modales;
+using SoftlogyMaui.Modelos;
 using System.Text;
 
-namespace TaxistasMaui;
+namespace SoftlogyMaui;
 
 public partial class MapaServicio : ContentPage
 {

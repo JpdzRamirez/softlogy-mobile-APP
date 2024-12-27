@@ -1,12 +1,12 @@
 ﻿using Plugin.Maui.Audio;
-using TaxistasMaui.Platforms.Droid;
+using SoftlogyMaui.Platforms.Droid;
 
-namespace TaxistasMaui
+namespace SoftlogyMaui
 {
     public partial class App : Application
     {
-        //public static string url = "https://crm.apptaxcenter.com/";
-        public static string url = "http://192.168.1.12:8080/";
+        //public static string url = "https://softlogyHeldesk-api.com/";
+        public static string url = "http://192.168.1.61:8334/";
         public static bool fondo = false;
         public static string? latitud;
         public static string? longitud;

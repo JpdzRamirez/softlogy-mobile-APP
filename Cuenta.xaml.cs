@@ -1,12 +1,12 @@
 using Newtonsoft.Json;
 using System.Net.Http.Headers;
-using TaxistasMaui.Interfaces;
-using TaxistasMaui.Modelos;
+using SoftlogyMaui.Interfaces;
+using SoftlogyMaui.Modelos;
 using Plugin.Media;
 using Plugin.Media.Abstractions;
 using CommunityToolkit.Mvvm.Messaging;
 
-namespace TaxistasMaui;
+namespace SoftlogyMaui;
 
 public partial class Cuenta : ContentPage
 {
@@ -76,7 +76,7 @@ public partial class Cuenta : ContentPage
                 }
                 else
                 {
-                    imgfoto.Source = ImageSource.FromResource("TaxistasMaui.Recursos.foto.png", typeof(Cuenta).Assembly);
+                    imgfoto.Source = ImageSource.FromResource("SoftlogyMaui.Recursos.foto.png", typeof(Cuenta).Assembly);
                 }
             }  
         }

@@ -1,7 +1,7 @@
 ﻿using Android.App;
 using Android.Runtime;
 
-namespace TaxistasMaui
+namespace SoftlogyMaui
 {
     [Application]
     public class MainApplication : MauiApplication
