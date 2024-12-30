@@ -1,14 +1,19 @@
 # Softlogyc Mobile App Helpdesk Interface
 
+<div align="center">
  <img align="center" width="500px" src="https://github.com/user-attachments/assets/781312cc-46cb-43a9-a575-0d8007094eb5" alt="Softlogy APP-MOBILE"/>
-
- <br>
+</div>
+ 
+<br>
 La Softlogyc Mobile App Helpdesk Interface es una innovadora aplicación móvil diseñada para ofrecer una solución eficiente y en tiempo real para la gestión de tickets de soporte técnico. Desarrollada utilizando tecnologías modernas como C# y Laravel, esta aplicación se integra perfectamente con la mesa de ayuda Softlogyc Helpdesk, una plataforma robusta basada en GLPI.
+
 
 ## Principales características:
 Gestión de tickets en tiempo real:
 La aplicación permite a los usuarios crear, actualizar y cerrar tickets de soporte de manera inmediata, asegurando una respuesta ágil a los problemas técnicos.
-
+<div align="center">
+ <img align="center" width="500px" src="https://github.com/user-attachments/assets/5424047c-415d-41a9-8f16-f9d4ffc2e546" alt="Softlogy APP-MOBILE"/>
+</div>
 ## Conexión con API RESTful en Laravel:
 Gracias a la implementación de un API RESTful en Laravel, la aplicación móvil se sincroniza en tiempo real con el sistema central Softlogyc Helpdesk. Esto garantiza que cualquier acción realizada desde la aplicación se refleje inmediatamente en la plataforma principal.
 
