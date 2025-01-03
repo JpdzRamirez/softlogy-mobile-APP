@@ -30,7 +30,7 @@
                    Grid.Column="1"
                    Grid.Row="0"
                    TextColor="White"
-                   x:Name="lbluser"
+                   x:Name="lblcuenta"
                    FontFamily="FAS"/>
 
             <Label VerticalOptions="Center"
@@ -39,7 +39,7 @@
                    TextColor="White"
                    Grid.Column="1"
                    Grid.Row="1"
-                   x:Name="lblnombres"
+                   x:Name="lblemail"
                    FontFamily="FAS"/>
         </Grid>
 
@@ -52,13 +52,11 @@
             <CollectionView.ItemsSource>
                 <x:Array Type="{x:Type local:FlyoutPageItem}">
                     <local:FlyoutPageItem Title="&#xf1ba; Inicio" Id="0" TargetType="{x:Type pages:HomeDetail}" />
-                    <local:FlyoutPageItem Title="&#xf1da; Historial" Id="1" TargetType="{x:Type pages:Historial}" />
-                    <local:FlyoutPageItem Title="&#xf0e0; Mensajes" Id="2" TargetType="{x:Type pages:Mensajes}" />
-                    <local:FlyoutPageItem Title="&#xf007; Cuenta" Id="3" TargetType="{x:Type pages:Cuenta}" />
-                    <local:FlyoutPageItem Title="&#xf079; Recargar" Id="4" TargetType="{x:Type pages:Recargar}" />
-                    <local:FlyoutPageItem Title="&#xf15b; Trámites" Id="8" TargetType="{x:Type pages:Tramite}" />
+                    <local:FlyoutPageItem Title="&#xf1da; Tickets" Id="1" TargetType="{x:Type pages:Historial}" />
+                    <local:FlyoutPageItem Title="&#xf0e0; Nuevo Ticket" Id="2" TargetType="{x:Type pages:Mensajes}" />
+                    <local:FlyoutPageItem Title="&#xf007; Perfil" Id="3" TargetType="{x:Type pages:Cuenta}" />
                     <local:FlyoutPageItem Title="&#xf505; Política de privacidad" Id="6" TargetType="{x:Type pages:Privacidad}" />
-                    <local:FlyoutPageItem Title="&#xf52b; Salir" Id="7" TargetType="{x:Type pages:Privacidad}" />
+                    <local:FlyoutPageItem Title="&#xf52b; Cerrar Sesión" Id="7" TargetType="{x:Type pages:Privacidad}" />
                 </x:Array>
             </CollectionView.ItemsSource>
             <CollectionView.ItemTemplate>

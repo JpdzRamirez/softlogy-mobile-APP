@@ -5,8 +5,8 @@ public partial class HomeMaster : ContentPage
     public HomeMaster()
     {
         InitializeComponent();
-        lbluser.Text = Preferences.Get("doctaxista", "").ToString();
-        lblnombres.Text = Preferences.Get("nombretaxista", "").ToString();
+        lblcuenta.Text = Preferences.Get("cuenta", "").ToString();
+        lblemail.Text = Preferences.Get("email", "").ToString();
 
         string base64 = Preferences.Get("foto", "").ToString();
 

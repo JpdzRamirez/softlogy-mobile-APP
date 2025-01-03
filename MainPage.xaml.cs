@@ -75,7 +75,7 @@ namespace SoftlogyMaui
                         }
                         else
                         {
-                            if (usuario?.password != null && usuario?.password == password)
+                            if (usuario?.password != null)
                             {
                                 if (usuario.is_active == "0")
                                 {
@@ -83,17 +83,18 @@ namespace SoftlogyMaui
                                     await DisplayAlert("Usuario bloqueado", "Su usuario se encuentra Inactivo", "Aceptar");
                                 }
                                 else
-                                {                                    
-                                    Preferences.Set("celular", usuario.mobile);
-                                    Preferences.Set("idtaxista", usuario.id);
-                                    Preferences.Set("telefono", usuario.phone);
-                                    Preferences.Set("telefono2", usuario.password);
+                                {
+                                    Preferences.Set("idusuario", usuario.id);
                                     Preferences.Set("cuenta", usuario.name);
                                     Preferences.Set("nombre", usuario.realname);
                                     Preferences.Set("apellido", usuario.firstname);
+                                    Preferences.Set("telefono", usuario.phone);
+                                    Preferences.Set("celular", usuario.mobile);
+                                    Preferences.Set("password", usuario.password);
                                     Preferences.Set("estado", usuario.is_active);
                                     Preferences.Set("tickets", usuario.tickets);
-                                            if (usuario.picture == null)
+                                    Preferences.Set("sesion", usuario.token);
+                                    if (usuario.picture == null)
                                             {
                                                 Preferences.Set("foto", "nofoto");
                                             }
@@ -127,6 +128,18 @@ namespace SoftlogyMaui
                         grillalogin.IsVisible = false;
                         btnentrar.IsEnabled = true;
                         await DisplayAlert("Error", "El usuario ingresado no es válido.", "Aceptar");
+                    }
+                    else if (response.StatusCode == System.Net.HttpStatusCode.NotFound)
+                    {
+                        await DisplayAlert("Error", "Usuario no encontrado.", "Aceptar");
+                    }
+                    else if (response.StatusCode == System.Net.HttpStatusCode.Unauthorized)
+                    {
+                        await DisplayAlert("Error", "Credenciales inválidas.", "Aceptar");
+                    }
+                    else if (response.StatusCode == System.Net.HttpStatusCode.Forbidden)
+                    {
+                        await DisplayAlert("Error", "El usuario está inactivo.", "Aceptar");
                     }
                     else
                     {
