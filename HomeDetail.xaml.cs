@@ -16,20 +16,26 @@ public partial class HomeDetail : ContentPage
     private HttpClient clientehttp;
     public static bool parar = true;
     int saldor, saldov, inicio;
-    string[] placas, ocupadas;
+    string[] tickets, open_tickets;
 
     public HomeDetail()
     {
         InitializeComponent();
+        // Agrega el token al encabezado Authorization
+        string token = Preferences.Get("token", string.Empty);
         clientehttp = new HttpClient(httpHandler);
+
+        clientehttp.DefaultRequestHeaders.Authorization =
+        new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", token);
+
         UpdateThemeIcon();
-        string nombre, doc;
-        nombre = Preferences.Get("nombretaxista", "");
-        doc = "\uf007 Usuario: " + Preferences.Get("doctaxista", "");
-        placas = Preferences.Get("placas", "").ToString().Split(['_']);
-        ocupadas = Preferences.Get("ocupadas", "").ToString().Split(['_']);
-        lblnombre.Text = nombre;
-        lbldocumento.Text = doc;
+        string idusername, username;
+        idusername = Preferences.Get("idusername", "");
+        username = "\uf007 Usuario: " + Preferences.Get("username", "");
+        tickets = Preferences.Get("placas", "").ToString().Split(['_']);
+        open_tickets = Preferences.Get("ocupadas", "").ToString().Split(['_']);
+        lblidusername.Text = idusername;
+        lblusername.Text = username;
 
         foreach (var item in placas)
         {
@@ -48,29 +54,6 @@ public partial class HomeDetail : ContentPage
         }
         definirPlaca();
         parar = true;
-
-        /*if (Preferences.Get("estilo", "null") == "1")
-        {
-            stackdetail.BackgroundColor = Colors.Black;
-            lblnombre.TextColor = Colors.White;
-            lbldocumento.TextColor = Colors.White;
-            lblplaca.TextColor = Colors.White;
-            picplaca.TextColor = Colors.White;
-            lblestado.TextColor = Colors.White;
-            lblinfored.TextColor = Colors.White;
-            lblinfogps.TextColor = Colors.White;
-        }
-        else
-        {
-            stackdetail.BackgroundColor = Colors.White;
-            lblnombre.TextColor = Colors.Black;
-            lbldocumento.TextColor = Colors.Black;
-            lblplaca.TextColor = Colors.Black;
-            picplaca.TextColor = Colors.Black;
-            lblestado.TextColor = Colors.Black;
-            lblinfored.TextColor = Colors.Black;
-            lblinfogps.TextColor = Colors.Black;
-        }*/
 
         CheckEstado();
         Saldos();
@@ -117,14 +100,10 @@ public partial class HomeDetail : ContentPage
 
     private async void Saldos()
     {
-        var content = new FormUrlEncodedContent(new[]
-        {
-            new KeyValuePair<string, string>("id", Preferences.Get("idtaxista", 0).ToString()),
-            new KeyValuePair<string, string>("app", "aplicacion"),
-        });
+ 
         try
         {
-            var response = await clientehttp.PostAsync(App.url + "aplicaciones/taxista/saldos", content);
+            var response = await clientehttp.GetAsync(App.url + "api/get-tickets");
 
             if (response.StatusCode == System.Net.HttpStatusCode.OK)
             {
@@ -142,12 +121,12 @@ public partial class HomeDetail : ContentPage
             }
             else
             {
-                DependencyService.Get<IToastService>().ShowToast("No se ha podido obtener sus saldos actuales");
+                DependencyService.Get<IToastService>().ShowToast("No se ha podido obtener sus tickets actuales");
             }
         }
         catch (Exception)
         {
-            DependencyService.Get<IToastService>().ShowToast("No se ha podido obtener sus saldos actuales");
+            DependencyService.Get<IToastService>().ShowToast("Error de Integración: ");
         }
     }
 

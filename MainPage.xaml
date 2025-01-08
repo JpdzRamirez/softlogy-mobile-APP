@@ -27,7 +27,7 @@
                      Aspect="AspectFit"
                      HeightRequest="150"
                      WidthRequest="200"
-                     x:Name="imgtaxi"
+                     x:Name="imgsoft"
                      Margin="0,30,0,30"
                      Source="softlogy.png"
                      HorizontalOptions="CenterAndExpand" />

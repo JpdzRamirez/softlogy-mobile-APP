@@ -45,7 +45,7 @@
             VerticalOptions="FillAndExpand">
 
             <Label 
-               x:Name="lblnombre"
+               x:Name="lblidusername"
                HorizontalOptions="CenterAndExpand"
                FontSize="30"
                MaxLines="2"
@@ -54,7 +54,7 @@
                FontAttributes="Bold"/>
 
             <Label 
-               x:Name="lbldocumento"
+               x:Name="lblusername"
                HorizontalOptions="CenterAndExpand"
                HorizontalTextAlignment="Center"
                FontFamily="FAS"

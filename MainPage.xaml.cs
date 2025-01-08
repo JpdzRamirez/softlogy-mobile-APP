@@ -21,9 +21,9 @@ namespace SoftlogyMaui
             versactual = App.versiondroid;
             plataforma = "1";
             clientehttp = new HttpClient(httpHandler);
-            imgtaxi.Source = ImageSource.FromFile("softlogy.png");
+            imgsoft.Source = ImageSource.FromFile("softlogy.png");
 
-            /*if (Preferences.Get("estilo", "null") == "1")
+            if (Preferences.Get("estilo", "null") == "1")
             {
                 stackmain.BackgroundColor = Colors.Black;
                 lblrecordar.TextColor = Colors.White;
@@ -32,7 +32,7 @@ namespace SoftlogyMaui
             {
                 stackmain.BackgroundColor = Colors.White;
                 lblrecordar.TextColor = Colors.Black;
-            }*/
+            }
 
             //if (Preferences.Get("sesion", "no") == "si")
             //{
@@ -60,7 +60,7 @@ namespace SoftlogyMaui
             });
                 try
                 {
-                    var response = await clientehttp.PostAsync(App.url + "microservicios/softlogy/login", content);
+                    var response = await clientehttp.PostAsync(App.url + "/microservicios/softlogy/login", content);
 
                     if (response.StatusCode == System.Net.HttpStatusCode.OK)
                     {
@@ -84,30 +84,29 @@ namespace SoftlogyMaui
                                 }
                                 else
                                 {
-                                    Preferences.Set("idusuario", usuario.id);
-                                    Preferences.Set("cuenta", usuario.name);
-                                    Preferences.Set("nombre", usuario.realname);
-                                    Preferences.Set("apellido", usuario.firstname);
-                                    Preferences.Set("telefono", usuario.phone);
-                                    Preferences.Set("celular", usuario.mobile);
+                                    Preferences.Set("idusername", usuario.id);
+                                    Preferences.Set("username", usuario.name);
+                                    Preferences.Set("realname", usuario.realname);
+                                    Preferences.Set("lastname", usuario.firstname);
+                                    Preferences.Set("phone", usuario.phone);
+                                    Preferences.Set("mobile", usuario.mobile);
                                     Preferences.Set("password", usuario.password);
-                                    Preferences.Set("estado", usuario.is_active);
+                                    Preferences.Set("is_active", usuario.is_active);
                                     Preferences.Set("tickets", usuario.tickets);
-                                    Preferences.Set("sesion", usuario.token);
+                                    Preferences.Set("token", usuario.token);
                                     if (usuario.picture == null)
                                             {
-                                                Preferences.Set("foto", "nofoto");
+                                                Preferences.Set("picture", "nofoto");
                                             }
                                             else
                                             {
-                                                Preferences.Set("foto", usuario.picture);
+                                                Preferences.Set("picture", usuario.picture);
                                             }
 
                                             if (checklogin.IsChecked)
-                                            {
-                                                Preferences.Set("sesion", "si");
-                                                Preferences.Set("documento", usuario.name);
-                                                Preferences.Set("pass", usuario.password);
+                                            {                                                
+                                                Preferences.Set("username", usuario.name);
+                                                Preferences.Set("password", usuario.password);
                                             }
 
                                             grillalogin.IsVisible = false;

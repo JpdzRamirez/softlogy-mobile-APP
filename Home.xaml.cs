@@ -39,12 +39,12 @@ public partial class Home : FlyoutPage
         Preferences.Set("sms", true);
         Preferences.Set("salir", true);
         Preferences.Set("mapa", false);
-        Preferences.Set("disponibles", 0);
+        Preferences.Set("tickets", 0);
         Preferences.Set("inicio", "1");
         Preferences.Set("sincronizando", "0");
         Preferences.Set("status", "Disponible  \uf058");
         Preferences.Set("boton", "0");
-        ConsultaServicio();
+        ConsultaTickets();
     }
 
     protected override bool OnBackButtonPressed()
@@ -162,7 +162,7 @@ public partial class Home : FlyoutPage
         }
     }
 
-    private async void ConsultaServicio()
+    private async void ConsultaTickets()
     {
 
         var content = new FormUrlEncodedContent(new[]
